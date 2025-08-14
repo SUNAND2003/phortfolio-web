@@ -9683,3 +9683,17 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+/*----------------------*/
+    html, body {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal movement if needed */
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    overflow-x: scroll; /* Allow horizontal scroll specifically in mobile */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll for mobile */
+  }
+}
