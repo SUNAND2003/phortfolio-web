@@ -9686,14 +9686,18 @@ textarea.form-control {
 
 
 /*----------------------*/
-    html, body {
-  width: 100%;
-  overflow-x: auto; /* Allow horizontal movement if needed */
+ /* Desktop / default behavior */
+.one-third.js-fullheight.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* safer than fixed */
 }
 
+/* Mobile override */
 @media (max-width: 768px) {
-  .home-section {
-    overflow-x: scroll; /* Allow horizontal scroll specifically in mobile */
-    -webkit-overflow-scrolling: touch; /* Smooth scroll for mobile */
+  .one-third.js-fullheight.img {
+    background-attachment: scroll !important; /* ensures scrollable */
+    height: 300px; /* set height for visibility */
   }
 }
